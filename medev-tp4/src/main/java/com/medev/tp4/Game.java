@@ -24,7 +24,7 @@ public class Game implements Serializable {
     private Player player1;
     private Player player2;
     private Player currentPlayer;
-    boolean running =true ;
+    boolean run =true ;
 
     public Game() {
         board = new Board();
@@ -35,7 +35,7 @@ public class Game implements Serializable {
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
-        while (running) {
+        while (run) {
             board.display();
             System.out.println("Current player: " + currentPlayer.getColor());
             
@@ -55,7 +55,7 @@ public class Game implements Serializable {
                 continue;
             } else if (input.equalsIgnoreCase("quit")){
                 System.out.println("Game ended");
-                running = false ;
+                run = false ;
                 continue;
             }
 
