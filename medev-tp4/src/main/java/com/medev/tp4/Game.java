@@ -24,6 +24,7 @@ public class Game implements Serializable {
     private Player player1;
     private Player player2;
     private Player currentPlayer;
+    boolean running =true ;
 
     public Game() {
         board = new Board();
@@ -34,7 +35,7 @@ public class Game implements Serializable {
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
-        while (true) {
+        while (running) {
             board.display();
             System.out.println("Current player: " + currentPlayer.getColor());
             
@@ -43,7 +44,7 @@ public class Game implements Serializable {
                 System.out.println("Capture is mandatory!");
             }
             
-            System.out.println("Enter your move (fromRow fromCol toRow toCol), 'save' to save, or 'load' to load:");
+            System.out.println("Enter your move (fromRow fromCol toRow toCol), 'save' to save, 'load' to load , or 'quit' to quit:");
             String input = scanner.nextLine();
 
             if (input.equalsIgnoreCase("save")) {
@@ -51,6 +52,10 @@ public class Game implements Serializable {
                 continue;
             } else if (input.equalsIgnoreCase("load")) {
                 loadGame("dame.txt");
+                continue;
+            } else if (input.equalsIgnoreCase("quit")){
+                System.out.println("Game ended");
+                running = false ;
                 continue;
             }
 
