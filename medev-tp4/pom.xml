@@ -33,6 +33,7 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     <build>
+        
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
