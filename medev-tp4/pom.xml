@@ -27,9 +27,11 @@
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>24</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
         <exec.mainClass>com.medev.tp4.MedevTp4</exec.mainClass>
-        </properties>
+        <sonar.organization>aelhdi23</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>
     <build>
         <plugins>
             <plugin>
